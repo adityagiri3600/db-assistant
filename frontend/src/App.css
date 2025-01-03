@@ -1,0 +1,115 @@
+* {
+  font-family: Quicksand-Regular;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(-45deg, rgb(154, 137, 231) 0%, rgb(255, 255, 255) 100%);
+}
+@font-face {
+  font-family: Quicksand-SemiBold;
+  src: url('../public/fonts/Quicksand-SemiBold.ttf');
+}
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url('../public/fonts/Quicksand-Bold.ttf');
+}
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url('../public/fonts/Quicksand-Regular.ttf');
+}
+@font-face {
+  font-family: Quicksand-Light;
+  src: url('../public/fonts/Quicksand-Light.ttf');
+}
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: linear-gradient(-45deg, rgb(107, 82, 222) 40%, rgb(167, 143, 219) 100%);
+  border-radius: 40px;
+  box-shadow: inset -5px -5px 20px rgba(30, 15, 113, 0.463),
+    10px 10px 100px rgb(68, 44, 174);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  color: white;
+  border-bottom: white 1px solid;
+  padding-bottom: 10px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-family: Quicksand-SemiBold;
+  font-size: small;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: white;
+  border-top-right-radius: 0;
+  padding: 10px;
+  color: rgb(63, 41, 161)
+}
+
+.message.ai {
+  background-color: rgb(164, 148, 236);
+  color: white;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.chat-input button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
